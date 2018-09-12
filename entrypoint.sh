@@ -14,7 +14,7 @@ if [ ! -z "${AWS_REGION}" ]; then
     # maps to our service's Parameter Store path.
     FAMILY=$(curl -s "${METADATA_URL}" | python -c "import sys, json; print(json.load(sys.stdin)['Family'])")
 
-    exec ${CHAMBER} exec "${FAMILY}" -- "$@"
+    exec "${CHAMBER}" exec "${FAMILY}" -- "$@"
 else
     exec "$@"
 fi
