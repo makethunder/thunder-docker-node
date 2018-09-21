@@ -1,6 +1,6 @@
 FROM node:10.10.0-alpine
 
-RUN apk add --no-cache curl
+RUN apk add --no-cache curl python
 
 COPY entrypoint.sh /usr/local/bin/
 
