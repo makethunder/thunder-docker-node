@@ -1,4 +1,6 @@
-FROM node:stretch
+FROM node:10.10.0-alpine
+
+RUN apk add --no-cache curl
 
 COPY entrypoint.sh /usr/local/bin/
 
