@@ -8,8 +8,8 @@
 #
 # Requires curl, chamber, jq (should be baked into Docker image)
 
-METADATA_URL=http://169.254.170.2/v2/metadata
-CHAMBER=/usr/local/bin/chamber
+METADATA_URL="http://169.254.170.2/v2/metadata"
+CHAMBER="/usr/local/bin/chamber"
 
 if [ ! -z "${AWS_REGION}" ]; then
     # Identifies our task name (e.g., worker-staging, worker-production) which
